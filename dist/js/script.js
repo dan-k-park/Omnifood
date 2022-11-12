@@ -5,7 +5,7 @@ const mobileNavBtn = document.querySelector('.mobile-nav');
 const headerEl = document.querySelector('.header');
 
 mobileNavBtn.addEventListener('click', () => {
-  headerEl.classList.toggle('nav-open');
+  headerEl.classList.toggle('mobile-nav-open');
 });
 
 // Smooth scrolling

@@ -1,0 +1,122 @@
+@use '../util' as u;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: var(--primary-tint-pale);
+
+  position: relative;
+
+  height: u.rem(72);
+  padding: 0 u.rem(24);
+
+  .logo {
+    height: u.rem(18);
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    background-color: hsla(0, 0%, 100%, 0.97);
+
+    transform: translateX(100%);
+    transition: all 0.5s;
+
+    backdrop-filter: blur(50%);
+    opacity: 0;
+
+    /* Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* Hide from screen readers */
+    visibility: hidden;
+
+    &__list {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: u.rem(48);
+
+      list-style: none;
+    }
+
+    &__link {
+      &:link,
+      &:visited {
+        display: inline-block;
+        text-decoration: none;
+        color: var(--dark-grey);
+        font-weight: 500;
+        font-size: u.rem(24);
+        transition: all 0.3s;
+      }
+
+      &:hover,
+      &:hover {
+        color: var(--primary-shade-med);
+      }
+    }
+
+    &__link--cta {
+      &:link,
+      &:visited {
+        padding: u.rem(12) u.rem(24);
+        border-radius: 9px;
+        color: var(--white);
+        background-color: var(--primary-shade-med);
+      }
+
+      &:hover,
+      &:active {
+        background-color: var(--primary);
+      }
+    }
+  }
+
+  .mobile-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: block;
+    z-index: 999;
+
+    &__icon {
+      height: u.rem(38);
+      width: u.rem(38);
+      color: var(--dark-grey);
+
+      &[name='close-outline'] {
+        display: none;
+      }
+    }
+  }
+}
+
+.mobile-nav-open {
+  .nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .mobile-nav__icon {
+    &[name='close-outline'] {
+      display: block;
+    }
+
+    &[name='menu-outline'] {
+      display: none;
+    }
+  }
+}
