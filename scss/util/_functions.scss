@@ -18,3 +18,14 @@
     @error 'Don\'t use units when using the em() function; only use numbers';
   }
 }
+
+@function fluidSizing($min, $max, $minV, $maxV) {
+  @return clamp(
+    $min,
+    calc(
+      $min * 0.0625rem + ($max - $min) * (100vw - $min * 0.0625rem) /
+        ($maxV - $minV)
+    ),
+    $max
+  );
+}
