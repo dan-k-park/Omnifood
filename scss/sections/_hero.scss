@@ -2,7 +2,7 @@
 
 .hero {
   background-color: var(--primary-tint-pale);
-  padding: u.rem(96) 0 u.rem(96) 0;
+  padding: u.rem(96) 0 u.rem(76) 0;
 
   &__container {
     display: grid;
@@ -10,7 +10,7 @@
     gap: u.rem(52);
 
     margin: 0 auto;
-    padding: 0 u.rem(24);
+    padding: 0 u.rem(32);
 
     @include u.for-tablet-landscape-up {
       grid-template-columns: repeat(2, 1fr);
