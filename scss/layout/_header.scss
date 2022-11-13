@@ -7,10 +7,11 @@
 
   background-color: var(--primary-tint-pale);
 
-  position: relative;
+  position: fixed;
 
-  height: u.rem(72);
-  padding: 0 u.rem(24);
+  height: u.rem(84);
+  padding: 0 u.rem(36);
+  width: 100%;
 
   .logo {
     height: clamp(1rem, 0.5rem + 1.33vw, 1.5rem);
@@ -49,6 +50,7 @@
 
       background-color: inherit;
       transform: none;
+      transition: none;
 
       visibility: visible;
       pointer-events: auto;
@@ -65,7 +67,7 @@
 
       @include u.for-tablet-landscape-up {
         flex-direction: row;
-        gap: u.rem(48);
+        gap: u.rem(36);
       }
     }
 
@@ -80,7 +82,7 @@
         transition: all 0.3s;
 
         @include u.for-tablet-landscape-up {
-          font-size: u.rem(16);
+          font-size: clamp(1rem, 0.25rem + 1.33vw, 1.25rem);
         }
       }
 
@@ -96,12 +98,12 @@
         padding: u.rem(12) u.rem(24);
         border-radius: 9px;
         color: var(--white);
-        background-color: var(--primary-shade-med);
+        background-color: var(--primary);
       }
 
       &:hover,
       &:active {
-        background-color: var(--primary);
+        background-color: var(--primary-shade-med);
       }
     }
   }

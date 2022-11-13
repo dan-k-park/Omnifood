@@ -2,58 +2,119 @@
 
 .hero {
   background-color: var(--primary-tint-pale);
-  padding: 4.8rem 0 9.6rem 0;
+  padding: u.rem(96) 0 u.rem(96) 0;
 
   &__container {
-    max-width: 130rem;
-    margin: 0 auto;
-    padding: 0 3.2rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 9.6rem;
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: u.rem(52);
+
+    margin: 0 auto;
+    padding: 0 u.rem(24);
+
+    @include u.for-tablet-landscape-up {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+
+    @include u.for-desktop-up {
+      max-width: u.rem(1300);
+    }
+  }
+
+  &__text,
+  &__img-container {
+    text-align: center;
+
+    @include u.for-tablet-landscape-up {
+      text-align: left;
+    }
   }
 
   &__description {
-    font-size: 2rem;
+    font-size: clamp(1rem, 0.75rem + 0.67vw, 1.25rem);
     line-height: 1.6;
-    margin-bottom: 4.8rem;
-  }
+    margin-bottom: u.rem(38);
 
-  &__img {
-    width: 100%;
+    @include u.for-tablet-landscape-up {
+      margin-bottom: u.rem(44);
+    }
+
+    @include u.for-desktop-up {
+      margin-bottom: u.rem(48);
+    }
   }
 
   &__delivered {
     display: flex;
-    margin-top: 8rem;
     align-items: center;
-    gap: 1.6rem;
+    justify-content: center;
+    gap: u.rem(12);
+
+    margin-top: u.rem(24);
+
+    @include u.for-tablet-landscape-up {
+      margin-top: u.rem(72);
+    }
+
+    @include u.for-desktop-up {
+      gap: u.rem(16);
+    }
 
     &-imgs {
       display: flex;
 
       img {
-        height: 4.8rem;
-        width: 4.8rem;
+        height: u.rem(38);
+        width: u.rem(38);
         border-radius: 50%;
-        margin-right: -1.6rem;
+        margin-right: u.rem(-12);
         border: 3px solid var(--primary-tint-pale);
 
         &:last-child {
           margin: 0;
         }
+
+        @include u.for-tablet-landscape-up {
+          height: u.rem(42);
+          width: u.rem(42);
+          margin-right: u.rem(-14);
+        }
+
+        @include u.for-desktop-up {
+          height: u.rem(48);
+          width: u.rem(48);
+          margin-right: u.rem(-16);
+        }
       }
     }
 
     &-text {
-      font-size: 1.8rem;
+      font-size: clamp(0.875rem, 0.625rem + 0.67vw, 1.125rem);
       font-weight: 600;
 
       span {
         color: var(--primary-shade-med);
         font-weight: 700;
       }
+    }
+  }
+
+  &__heading {
+    font-size: u.rem(36);
+    line-height: 1.05;
+    color: var(--dark-grey);
+  }
+
+  &__img {
+    width: 80%;
+
+    @include u.for-tablet-portrait-up {
+      width: 55%;
+    }
+
+    @include u.for-tablet-landscape-up {
+      width: 100%;
     }
   }
 }

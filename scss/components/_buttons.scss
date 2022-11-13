@@ -1,12 +1,18 @@
+@use '../util' as u;
+
 .btn {
   &:link,
   &:visited {
     display: inline-block;
-    font-size: 2rem;
+    font-size: clamp(1rem, 0.875rem + 0.33vw, 1.125rem);
     font-weight: 600;
-    padding: 1.6rem 3.2rem;
+    padding: u.rem(18) u.rem(12);
     text-decoration: none;
     border-radius: 9px;
+
+    @include u.for-tablet-portrait-up {
+      padding: u.rem(12) u.rem(24);
+    }
   }
 
   // Only for .btn

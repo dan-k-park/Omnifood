@@ -1,3 +1,5 @@
+@use '../util' as u;
+
 .heading {
   font-weight: 700;
   line-height: 1.05;
@@ -7,9 +9,9 @@
   //
 
   &--primary {
-    font-size: clamp(2.6rem, 1.6rem + 2vw, 5.2rem);
+    font-size: clamp(2.2rem, 1.15rem + 2.8vw, 3.25rem);
     letter-spacing: -0.5px;
-    margin-bottom: 3.2rem;
+    margin-bottom: u.rem(24);
   }
 
   &--secondary {

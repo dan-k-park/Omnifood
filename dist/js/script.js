@@ -32,25 +32,25 @@ allLinks.forEach((link) => {
   });
 });
 
-// // Sticky Nav
-// const heroSectionEl = document.querySelector('.section-hero');
+// Sticky Nav
+const heroSectionEl = document.querySelector('.hero');
 
-// const observer = new IntersectionObserver(
-//   (entries) => {
-//     const ent = entries[0];
-//     if (!ent.isIntersecting) {
-//       document.body.classList.add('sticky');
-//     } else {
-//       document.body.classList.remove('sticky');
-//     }
-//   },
-//   {
-//     root: null,
-//     threshold: 0,
-//     rootMargin: '-80px',
-//   }
-// );
-// observer.observe(heroSectionEl);
+const observer = new IntersectionObserver(
+  (entries) => {
+    const ent = entries[0];
+    if (!ent.isIntersecting) {
+      document.body.classList.add('sticky');
+    } else {
+      document.body.classList.remove('sticky');
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: '-80px',
+  }
+);
+observer.observe(heroSectionEl);
 
 // ///////////////////////////////////////////////////////////
 // // Fixing flexbox gap property missing in some Safari versions
