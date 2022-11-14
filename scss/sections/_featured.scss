@@ -25,14 +25,6 @@
       @include u.for-tablet-portrait-up {
         height: clamp(1.125rem, 0.25rem + 2.33vw, 2rem);
       }
-
-      // @include u.for-tablet-landscape-up {
-      //   height: u.rem(28);
-      // }
-
-      // @include u.for-desktop-up {
-      //   height: u.rem(32);
-      // }
     }
   }
 }

@@ -8,6 +8,7 @@
   background-color: var(--primary-tint-pale);
 
   position: fixed;
+  z-index: 99;
 
   height: u.rem(84);
   padding: 0 u.rem(36);
