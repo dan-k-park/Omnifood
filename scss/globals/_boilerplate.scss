@@ -23,7 +23,15 @@ body {
 }
 
 .margin-bottom-md {
-  margin-bottom: 4.8rem !important;
+  margin-bottom: u.rem(38) !important;
+
+  @include u.for-tablet-landscape-up {
+    margin-bottom: u.rem(44) !important;
+  }
+
+  @include u.for-desktop-up {
+    margin-bottom: u.rem(48) !important;
+  }
 }
 
 .center-text {

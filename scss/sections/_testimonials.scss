@@ -1,0 +1,74 @@
+@use '../util' as u;
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+
+  background-color: var(--primary-tint-pale);
+
+  &__container {
+    padding: u.rem(72) u.rem(24);
+
+    @include u.for-tablet-landscape-up {
+      grid-template-columns: 55fr 45fr;
+
+      padding: u.rem(84) u.rem(28);
+    }
+
+    @include u.for-desktop-up {
+      padding: u.rem(96);
+    }
+  }
+
+  &__figures {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: u.rem(38);
+
+    @include u.for-tablet-portrait-up {
+      grid-template-columns: 1fr 1fr;
+      column-gap: u.rem(64);
+    }
+
+    @include u.for-tablet-landscape-up {
+      column-gap: u.rem(72);
+      row-gap: u.rem(42);
+    }
+
+    @include u.for-desktop-up {
+      column-gap: u.rem(80);
+      row-gap: u.rem(48);
+    }
+  }
+
+  img {
+    width: clamp(3.2rem, 2.4rem + 2.13vw, 4rem);
+    border-radius: 50%;
+
+    margin-bottom: u.rem(9.6);
+
+    @include u.for-tablet-landscape-up {
+      margin-bottom: u.rem(10.8);
+    }
+
+    @include u.for-desktop-up {
+      margin-bottom: u.rem(12);
+    }
+  }
+
+  blockquote {
+    font-size: clamp(0.9rem, 0.675rem + 0.6vw, 1.125rem);
+    line-height: 1.8;
+
+    margin-bottom: u.rem(12.8);
+
+    @include u.for-tablet-landscape-up {
+      margin-bottom: u.rem(14.4);
+    }
+
+    @include u.for-desktop-up {
+      margin-bottom: u.rem(16);
+    }
+  }
+}
