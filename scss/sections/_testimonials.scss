@@ -12,10 +12,10 @@
   }
 
   &__container {
-    padding: u.rem(72) u.rem(24);
+    padding: u.rem(76.8) u.rem(25.6);
 
     @include u.for-tablet-landscape-up {
-      padding: u.rem(84) u.rem(28);
+      padding: u.rem(86.4) u.rem(28.8);
     }
 
     @include u.for-desktop-up {

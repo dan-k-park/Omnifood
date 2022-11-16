@@ -60,6 +60,46 @@ body {
   }
 }
 
+.list {
+  display: flex;
+  flex-direction: column;
+
+  list-style: none;
+
+  gap: u.rem(12.8);
+
+  @include u.for-tablet-landscape-up {
+    gap: u.rem(14.4);
+  }
+
+  @include u.for-desktop-up {
+    gap: u.rem(16);
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: u.rem(12.8);
+
+    font-size: clamp(0.9rem, 0.675rem + 0.6vw, 1.125rem);
+    line-height: 1.2;
+
+    @include u.for-tablet-landscape-up {
+      gap: u.rem(14.4);
+    }
+
+    @include u.for-desktop-up {
+      gap: u.rem(16);
+    }
+  }
+
+  &__icon {
+    height: clamp(1.5rem, 1.125rem + 1vw, 1.875rem);
+    width: clamp(1.5rem, 1.125rem + 1vw, 1.875rem);
+    color: var(--primary);
+  }
+}
+
 strong {
   font-weight: 500;
 }

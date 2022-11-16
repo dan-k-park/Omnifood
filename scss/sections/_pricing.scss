@@ -1,0 +1,198 @@
+@use '../util' as u;
+
+.pricing-plan {
+  border-radius: 11px;
+  width: 100%;
+
+  &--starter {
+    border: 2px solid var(--primary-tint-pale);
+    justify-self: end;
+
+    padding: u.rem(36.8);
+
+    @include u.for-tablet-landscape-up {
+      padding: u.rem(41.4);
+    }
+
+    @include u.for-desktop-up {
+      padding: u.rem(46);
+    }
+  }
+
+  &--complete {
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: var(--primary-tint-pale);
+
+    padding: u.rem(38.4);
+
+    @include u.for-tablet-landscape-up {
+      padding: u.rem(43.2);
+    }
+
+    @include u.for-desktop-up {
+      padding: u.rem(48);
+    }
+
+    &::after {
+      content: 'Best Value';
+      text-transform: uppercase;
+      font-size: clamp(0.625rem, 0.5rem + 0.33vw, 0.75rem);
+      font-weight: 700;
+      color: var(--dark-grey);
+      background-color: hsl(47, 100%, 62%);
+
+      position: absolute;
+      top: 6%;
+      right: -18%;
+
+      padding: u.rem(6.4) u.rem(64);
+
+      transform: rotate(45deg);
+
+      @include u.for-tablet-landscape-up {
+        padding: u.rem(7.2) u.rem(72);
+      }
+
+      @include u.for-desktop-up {
+        padding: u.rem(8) u.rem(80);
+      }
+    }
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: u.rem(38);
+
+    @include u.for-tablet-landscape-up {
+      margin-bottom: u.rem(44);
+    }
+
+    @include u.for-desktop-up {
+      margin-bottom: u.rem(48);
+    }
+  }
+
+  &__name {
+    font-size: clamp(1rem, 0.8rem + 0.53vw, 1.25rem);
+    font-weight: 600;
+    letter-spacing: 0.75;
+    text-transform: uppercase;
+
+    color: var(--primary-shade-med);
+
+    margin-bottom: u.rem(24);
+
+    @include u.for-tablet-landscape-up {
+      margin-bottom: u.rem(30);
+    }
+
+    @include u.for-desktop-up {
+      margin-bottom: u.rem(32);
+    }
+  }
+
+  &__price {
+    font-size: clamp(3.1rem, 2.48rem + 1.65vw, 3.875rem);
+    font-weight: 600;
+    color: var(--dark-grey);
+
+    margin-bottom: u.rem(12.8);
+
+    @include u.for-tablet-landscape-up {
+      margin-bottom: u.rem(14.4);
+    }
+
+    @include u.for-desktop-up {
+      margin-bottom: u.rem(16);
+    }
+
+    span {
+      font-size: clamp(1.5rem, 1.2rem + 0.8vw, 1.875rem);
+      font-weight: 500;
+      margin-right: u.rem(6.4);
+
+      @include u.for-tablet-landscape-up {
+        margin-right: u.rem(7.2);
+      }
+
+      @include u.for-desktop-up {
+        margin-right: u.rem(8);
+      }
+    }
+  }
+
+  &__text {
+    font-size: clamp(0.75rem, 0.5rem + 0.67vw, 1rem);
+    line-height: 1.6rem;
+    color: hsl(0, 0%, 44%);
+  }
+
+  &__sign-up {
+    text-align: center;
+
+    margin-top: u.rem(38);
+
+    @include u.for-tablet-landscape-up {
+      margin-bottom: u.rem(44);
+    }
+
+    @include u.for-desktop-up {
+      margin-top: u.rem(48);
+    }
+  }
+
+  &__details {
+    font-size: clamp(0.75rem, 0.5rem + 0.67vw, 1rem);
+    line-height: 1.6rem;
+    text-align: center;
+  }
+}
+
+.feature {
+  &__icon {
+    height: clamp(1.6rem, 1.2rem + 1.07vw, 2rem);
+    width: clamp(1.6rem, 1.2rem + 1.07vw, 2rem);
+
+    background-color: var(--primary-tint-pale);
+    color: var(--primary-shade-med);
+
+    margin-bottom: u.rem(24);
+    padding: u.rem(12.8);
+
+    border-radius: 50%;
+
+    @include u.for-tablet-landscape-up {
+      margin-bottom: u.rem(30);
+      padding: u.rem(14.4);
+    }
+
+    @include u.for-desktop-up {
+      margin-bottom: u.rem(32);
+      padding: u.rem(16);
+    }
+  }
+
+  &__title {
+    font-size: clamp(1.2rem, 0.9rem + 0.8vw, 1.5rem);
+    color: var(--dark-grey);
+    font-weight: 700;
+
+    margin-bottom: u.rem(12.8);
+
+    @include u.for-tablet-landscape-up {
+      margin-bottom: u.rem(14.4);
+    }
+
+    @include u.for-desktop-up {
+      margin-bottom: u.rem(16);
+    }
+  }
+
+  &__text {
+    font-size: clamp(0.875rem, 0.625rem + 0.67vw, 1.125rem);
+    line-height: 1.8;
+  }
+}

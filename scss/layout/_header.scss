@@ -11,8 +11,16 @@
   z-index: 99;
 
   height: u.rem(84);
-  padding: 0 u.rem(36);
+  padding-inline: u.rem(25.6);
   width: 100%;
+
+  @include u.for-tablet-landscape-up {
+    padding-inline: u.rem(28.8);
+  }
+
+  @include u.for-desktop-up {
+    padding-inline: u.rem(48);
+  }
 
   .logo {
     height: clamp(1rem, 0.5rem + 1.33vw, 1.5rem);

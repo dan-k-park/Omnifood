@@ -1,6 +1,14 @@
 @use '../util' as u;
 .how {
-  padding-block: u.rem(76);
+  padding-block: u.rem(76.8);
+
+  @include u.for-tablet-landscape-up {
+    padding-block: u.rem(86.4);
+  }
+
+  @include u.for-desktop-up {
+    padding-block: u.rem(96);
+  }
 
   &__step-number {
     font-size: clamp(3.75rem, 2.125rem + 4.33vw, 5.375rem);

@@ -1,7 +1,15 @@
 @use '../util' as u;
 
 .featured {
-  padding: u.rem(38) 0 u.rem(24) 0;
+  padding-block: u.rem(38.4) u.rem(25.6);
+
+  @include u.for-tablet-landscape-up {
+    padding-block: u.rem(43.2) u.rem(28.8);
+  }
+
+  @include u.for-desktop-up {
+    padding-block: u.rem(48) u.rem(32);
+  }
 
   &__heading {
     font-size: clamp(0.688rem, 0.5rem + 0.5vw, 0.875rem);
