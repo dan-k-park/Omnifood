@@ -49,10 +49,66 @@
     form {
       display: grid;
       grid-template-columns: 1fr;
+      row-gap: u.rem(19.2);
 
       @include u.for-tablet-landscape-up {
         grid-template-columns: 1fr 1fr;
+        column-gap: u.rem(28.8);
+        row-gap: u.rem(21.6);
       }
+
+      @include u.for-desktop-up {
+        column-gap: u.rem(32);
+        row-gap: u.rem(24);
+      }
+
+      label {
+        display: block;
+        font-size: clamp(0.75rem, 0.5rem + 0.67vw, 1rem);
+        font-weight: 500;
+
+        margin-bottom: u.rem(9.6);
+
+        @include u.for-tablet-landscape-up {
+          margin-bottom: u.rem(10.8);
+        }
+
+        @include u.for-desktop-up {
+          margin-bottom: u.rem(12);
+        }
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: u.rem(9.6);
+
+        font-size: clamp(0.875rem, 0.625rem + 0.67vw, 1.125rem);
+        font-family: inherit;
+        color: inherit;
+
+        border: none;
+        background-color: var(--primary-tint-pale);
+        border-radius: 9px;
+        box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.1);
+
+        @include u.for-tablet-landscape-up {
+          padding: u.rem(10.8);
+        }
+
+        @include u.for-desktop-up {
+          padding: u.rem(12);
+        }
+      }
+
+      input::placeholder {
+        color: hsl(0, 0%, 67%);
+      }
+    }
+
+    *:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.3rem hsla(27, 83%, 95%, 0.5);
     }
   }
 

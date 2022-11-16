@@ -1,26 +1,29 @@
 @use '../util' as u;
 
 .btn {
-  &:link,
-  &:visited {
-    display: inline-block;
-    font-size: clamp(1rem, 0.875rem + 0.33vw, 1.125rem);
-    font-weight: 600;
-    padding: u.rem(18) u.rem(12);
-    text-decoration: none;
-    border-radius: 9px;
+  display: inline-block;
 
-    @include u.for-tablet-portrait-up {
-      padding: u.rem(12) u.rem(24);
-    }
-  }
+  font-size: clamp(1rem, 0.875rem + 0.33vw, 1.125rem);
+  font-weight: 600;
 
-  // Only for .btn
+  padding: u.rem(18) u.rem(12);
+
+  border-radius: 9px;
+
   border: none;
   cursor: pointer;
   font-family: inherit;
 
   transition: all 0.3s;
+
+  @include u.for-tablet-portrait-up {
+    padding: u.rem(12) u.rem(24);
+  }
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
 
   &--full:link,
   &--full:visited {
@@ -51,7 +54,15 @@
     background-color: var(--primary-shade-dark);
     color: var(--primary-tint-pale);
     align-self: end;
-    padding: 1.2rem;
+    padding: u.rem(9.6);
+
+    @include u.for-tablet-landscape-up {
+      padding: u.rem(10.8);
+    }
+
+    @include u.for-desktop-up {
+      padding: u.rem(12);
+    }
 
     &:hover {
       background-color: var(--white);
