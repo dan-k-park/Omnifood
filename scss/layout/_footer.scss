@@ -19,6 +19,8 @@
     grid-column: span 3;
 
     @include u.for-tablet-portrait-up {
+      grid-row: 1;
+      grid-column: 1;
     }
   }
 
@@ -61,7 +63,7 @@
     line-height: 1.6;
     color: hsl(0, 0%, 46%);
 
-    margin-top: auto;
+    margin-top: 30%;
   }
 
   &__heading {
@@ -81,6 +83,11 @@
 
   &__contact {
     grid-column: span 3;
+
+    @include u.for-tablet-portrait-up {
+      grid-row: 1;
+      grid-column: 2;
+    }
 
     &-info {
       font-size: clamp(0.75rem, 0.5rem + 0.67vw, 1rem);
@@ -107,6 +114,10 @@
 
     margin-bottom: u.rem(25.6);
 
+    @include u.for-tablet-portrait-up {
+      grid-column: span 1;
+    }
+
     @include u.for-tablet-landscape-up {
       margin-bottom: u.rem(28.8);
     }
@@ -131,21 +142,21 @@
         gap: u.rem(24);
       }
     }
+  }
 
-    &__link {
-      &:link,
-      &:visited {
-        font-size: clamp(0.75rem, 0.5rem + 0.67vw, 1rem);
-        text-decoration: none;
-        color: hsl(0, 0%, 46%);
+  &__link {
+    &:link,
+    &:visited {
+      font-size: clamp(0.75rem, 0.5rem + 0.67vw, 1rem);
+      text-decoration: none;
+      color: hsl(0, 0%, 46%);
 
-        transition: all 0.3s;
-      }
+      transition: all 0.3s;
+    }
 
-      &:hover,
-      &:active {
-        color: var(--text-color);
-      }
+    &:hover,
+    &:active {
+      color: var(--text-color);
     }
   }
 }

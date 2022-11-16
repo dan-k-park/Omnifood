@@ -5,13 +5,13 @@
   row-gap: u.rem(38);
 
   @include u.for-tablet-portrait-up {
-    row-gap: u.rem(52);
-    column-gap: u.rem(38);
+    row-gap: u.rem(51.2);
+    column-gap: u.rem(38.4);
   }
 
   @include u.for-tablet-landscape-up {
-    row-gap: u.rem(58);
-    column-gap: u.rem(44);
+    row-gap: u.rem(57.6);
+    column-gap: u.rem(43.2);
   }
 
   @include u.for-desktop-up {
@@ -52,6 +52,7 @@
 
   &--footer {
     grid-template-columns: repeat(6, 1fr);
+    column-gap: u.rem(38.4);
 
     @include u.for-tablet-portrait-up {
       grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
