@@ -1,0 +1,151 @@
+@use '../util' as u;
+
+.footer {
+  padding-block: u.rem(102.4);
+  border-top: 1px solid hsl(0, 0%, 93%);
+
+  @include u.for-tablet-landscape-up {
+    padding-block: u.rem(115.2);
+  }
+
+  @include u.for-desktop-up {
+    padding-block: u.rem(128);
+  }
+
+  &__logos {
+    display: flex;
+    flex-direction: column;
+
+    grid-column: span 3;
+
+    @include u.for-tablet-portrait-up {
+    }
+  }
+
+  &__logo {
+    display: block;
+
+    margin-bottom: u.rem(25.6);
+
+    @include u.for-tablet-landscape-up {
+      margin-bottom: u.rem(28.8);
+    }
+
+    @include u.for-desktop-up {
+      margin-bottom: u.rem(32);
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: u.rem(19.2);
+
+    list-style: none;
+
+    @include u.for-tablet-landscape-up {
+      gap: u.rem(21.6);
+    }
+
+    @include u.for-desktop-up {
+      gap: u.rem(24);
+    }
+
+    &-icon {
+      height: clamp(1.2rem, 0.9rem + 0.8vw, 1.5rem);
+      width: clamp(1.2rem, 0.9rem + 0.8vw, 1.5rem);
+    }
+  }
+
+  &__copyright {
+    font-size: clamp(0.688rem, 0.5rem + 0.5vw, 0.875rem);
+    line-height: 1.6;
+    color: hsl(0, 0%, 46%);
+
+    margin-top: auto;
+  }
+
+  &__heading {
+    font-size: clamp(0.875rem, 0.625rem + 0.67vw, 1.125rem);
+    font-weight: 500;
+
+    margin-bottom: u.rem(32);
+
+    @include u.for-tablet-landscape-up {
+      margin-bottom: u.rem(36);
+    }
+
+    @include u.for-desktop-up {
+      margin-bottom: u.rem(40);
+    }
+  }
+
+  &__contact {
+    grid-column: span 3;
+
+    &-info {
+      font-size: clamp(0.75rem, 0.5rem + 0.67vw, 1rem);
+      font-style: normal;
+      line-height: 1.6;
+    }
+
+    &-address {
+      margin-bottom: u.rem(19.2);
+
+      @include u.for-tablet-landscape-up {
+        margin-bottom: u.rem(21.6);
+      }
+
+      @include u.for-desktop-up {
+        margin-bottom: u.rem(24);
+      }
+    }
+  }
+
+  &__nav {
+    grid-row: 1;
+    grid-column: span 2;
+
+    margin-bottom: u.rem(25.6);
+
+    @include u.for-tablet-landscape-up {
+      margin-bottom: u.rem(28.8);
+    }
+
+    @include u.for-desktop-up {
+      margin-bottom: u.rem(32);
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+
+      list-style: none;
+
+      gap: u.rem(19.2);
+
+      @include u.for-tablet-landscape-up {
+        gap: u.rem(21.6);
+      }
+
+      @include u.for-desktop-up {
+        gap: u.rem(24);
+      }
+    }
+
+    &__link {
+      &:link,
+      &:visited {
+        font-size: clamp(0.75rem, 0.5rem + 0.67vw, 1rem);
+        text-decoration: none;
+        color: hsl(0, 0%, 46%);
+
+        transition: all 0.3s;
+      }
+
+      &:hover,
+      &:active {
+        color: var(--text-color);
+      }
+    }
+  }
+}

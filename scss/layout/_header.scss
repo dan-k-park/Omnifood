@@ -22,10 +22,6 @@
     padding-inline: u.rem(48);
   }
 
-  .logo {
-    height: clamp(1rem, 0.5rem + 1.33vw, 1.5rem);
-  }
-
   .nav {
     display: flex;
     align-items: center;

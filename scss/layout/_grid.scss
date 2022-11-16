@@ -49,6 +49,14 @@
   &--center-vert {
     align-items: center;
   }
+
+  &--footer {
+    grid-template-columns: repeat(6, 1fr);
+
+    @include u.for-tablet-portrait-up {
+      grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+    }
+  }
 }
 
 .grid:not(:last-child) {

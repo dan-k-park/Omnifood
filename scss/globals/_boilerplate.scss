@@ -103,3 +103,7 @@ body {
 strong {
   font-weight: 500;
 }
+
+.logo {
+  height: clamp(1rem, 0.5rem + 1.33vw, 1.5rem);
+}
