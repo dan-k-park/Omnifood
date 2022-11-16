@@ -23,10 +23,10 @@ body {
 }
 
 .margin-bottom-md {
-  margin-bottom: u.rem(38) !important;
+  margin-bottom: u.rem(38.4) !important;
 
   @include u.for-tablet-landscape-up {
-    margin-bottom: u.rem(44) !important;
+    margin-bottom: u.rem(43.2) !important;
   }
 
   @include u.for-desktop-up {

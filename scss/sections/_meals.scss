@@ -94,10 +94,10 @@
     font-weight: 600;
     color: var(--dark-grey);
 
-    margin-bottom: u.rem(24);
+    margin-bottom: u.rem(25.6);
 
     @include u.for-tablet-landscape-up {
-      margin-bottom: u.rem(30);
+      margin-bottom: u.rem(28.8);
     }
 
     @include u.for-desktop-up {

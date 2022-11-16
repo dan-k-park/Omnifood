@@ -64,10 +64,11 @@
 
   header {
     text-align: center;
-    margin-bottom: u.rem(38);
+
+    margin-bottom: u.rem(38.4);
 
     @include u.for-tablet-landscape-up {
-      margin-bottom: u.rem(44);
+      margin-bottom: u.rem(43.2);
     }
 
     @include u.for-desktop-up {
@@ -83,10 +84,10 @@
 
     color: var(--primary-shade-med);
 
-    margin-bottom: u.rem(24);
+    margin-bottom: u.rem(25.6);
 
     @include u.for-tablet-landscape-up {
-      margin-bottom: u.rem(30);
+      margin-bottom: u.rem(28.8);
     }
 
     @include u.for-desktop-up {
@@ -159,13 +160,13 @@
     background-color: var(--primary-tint-pale);
     color: var(--primary-shade-med);
 
-    margin-bottom: u.rem(24);
+    margin-bottom: u.rem(25.6);
     padding: u.rem(12.8);
 
     border-radius: 50%;
 
     @include u.for-tablet-landscape-up {
-      margin-bottom: u.rem(30);
+      margin-bottom: u.rem(28.8);
       padding: u.rem(14.4);
     }
 

@@ -49,10 +49,11 @@
   &__description {
     font-size: clamp(1rem, 0.75rem + 0.67vw, 1.25rem);
     line-height: 1.6;
-    margin-bottom: u.rem(38);
+
+    margin-bottom: u.rem(38.4);
 
     @include u.for-tablet-landscape-up {
-      margin-bottom: u.rem(44);
+      margin-bottom: u.rem(43.2);
     }
 
     @include u.for-desktop-up {

@@ -1,0 +1,112 @@
+@use '../util/' as u;
+
+.cta {
+  padding-block: u.rem(38.4) u.rem(102.4);
+
+  @include u.for-tablet-landscape-up {
+    padding-block: u.rem(43.2) u.rem(115.2);
+  }
+
+  @include u.for-desktop-up {
+    padding-block: u.rem(48) u.rem(128);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    box-shadow: 0 u.rem(24) u.rem(48) hsla(0, 0%, 0%, 0.15);
+    border-radius: 11px;
+
+    background-image: linear-gradient(
+      90deg,
+      var(--primary-shade-light),
+      var(--primary)
+    );
+    overflow: hidden;
+
+    @include u.for-tablet-portrait-up {
+      grid-template-columns: 3fr 2fr;
+    }
+
+    @include u.for-tablet-landscape-up {
+      grid-template-columns: 2fr 1fr;
+    }
+
+    .heading--secondary {
+      color: inherit;
+      margin-bottom: u.rem(25.6);
+
+      @include u.for-tablet-landscape-up {
+        margin-bottom: u.rem(28.8);
+      }
+
+      @include u.for-desktop-up {
+        margin-bottom: u.rem(32);
+      }
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      @include u.for-tablet-landscape-up {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+
+  &__text-box {
+    color: var(--primary-shade-dark);
+
+    padding: u.rem(25.6);
+
+    @include u.for-tablet-portrait-up {
+      padding: u.rem(38.4) u.rem(51.2) u.rem(51.2) u.rem(51.2);
+    }
+
+    @include u.for-tablet-landscape-up {
+      padding: u.rem(43.2) u.rem(57.6) u.rem(57.6) u.rem(57.6);
+    }
+
+    @include u.for-desktop-up {
+      padding: u.rem(48) u.rem(64) u.rem(64) u.rem(64);
+    }
+
+    p {
+      font-size: clamp(0.875rem, 0.625rem + 0.67vw, 1.125rem);
+      line-height: 1.8;
+
+      margin-bottom: u.rem(38.4);
+
+      @include u.for-tablet-landscape-up {
+        margin-bottom: u.rem(43.2);
+      }
+
+      @include u.for-desktop-up {
+        margin-bottom: u.rem(48);
+      }
+    }
+  }
+
+  &__img-box {
+    background-image: linear-gradient(
+        to right bottom,
+        hsla(28, 80%, 61%, 0.35),
+        hsla(28, 80%, 52%, 0.35)
+      ),
+      url('../img/eating.jpg');
+    background-size: cover;
+    background-position: center;
+
+    height: u.rem(256);
+
+    grid-row: 1;
+
+    @include u.for-tablet-portrait-up {
+      grid-column: 2;
+
+      height: 100%;
+    }
+  }
+}

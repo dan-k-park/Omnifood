@@ -8,10 +8,10 @@
   &--primary {
     font-size: clamp(2rem, 1rem + 2.67vw, 3rem);
     letter-spacing: -0.5px;
-    margin-bottom: u.rem(24);
+    margin-bottom: u.rem(25.6);
 
     @include u.for-tablet-landscape-up {
-      margin-bottom: u.rem(28);
+      margin-bottom: u.rem(28.8);
     }
 
     @include u.for-desktop-up {
@@ -40,10 +40,10 @@
   &--tertiary {
     font-size: clamp(1.125rem, 0.375rem + 2vw, 1.875rem);
     line-height: 1.2;
-    margin-bottom: u.rem(24);
+    margin-bottom: u.rem(25.6);
 
     @include u.for-tablet-landscape-up {
-      margin-bottom: u.rem(28);
+      margin-bottom: u.rem(28.8);
     }
 
     @include u.for-desktop-up {
