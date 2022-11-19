@@ -15,7 +15,7 @@
   padding-inline: u.rem(25.6);
   width: 100%;
 
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 
   @include u.for-tablet-landscape-up {
     height: u.rem(72);
