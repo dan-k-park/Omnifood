@@ -4,11 +4,11 @@
   padding-block: u.rem(84) u.rem(102.4);
 
   @include u.for-tablet-landscape-up {
-    padding-block: u.rem(43.2) u.rem(115.2);
+    padding-block: u.rem(96) u.rem(115.2);
   }
 
   @include u.for-desktop-up {
-    padding-block: u.rem(48) u.rem(128);
+    padding-block: u.rem(144) u.rem(128);
   }
 
   &__content {

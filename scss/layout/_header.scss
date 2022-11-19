@@ -16,7 +16,7 @@
   width: 100%;
 
   @include u.for-tablet-landscape-up {
-    height: u.rem(86.4);
+    height: u.rem(72);
     padding-inline: u.rem(28.8);
 
     background-color: var(--primary-tint-pale);
@@ -24,7 +24,7 @@
   }
 
   @include u.for-desktop-up {
-    height: u.rem(96);
+    height: u.rem(78);
     padding-inline: u.rem(48);
   }
 
