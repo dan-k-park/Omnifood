@@ -5,11 +5,11 @@
   padding-block: u.rem(96);
 
   @include u.for-tablet-landscape-up {
-    padding-block: u.rem(100) u.rem(86.4);
+    padding-block: u.rem(108) u.rem(86.4);
   }
 
   @include u.for-desktop-up {
-    padding-block: u.rem(104) u.rem(96);
+    padding-block: u.rem(120) u.rem(96);
   }
 
   &__container {

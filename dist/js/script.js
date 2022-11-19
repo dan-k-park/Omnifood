@@ -17,15 +17,21 @@ mobileNavBtn.addEventListener('click', () => {
   header.classList.toggle('mobile-nav-open');
 });
 
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 900) {
+    header.classList.remove('mobile-nav-open');
+  }
+});
+
 // Sticky nav
 
 const scrollRoot = document.querySelector('.hero');
 const headerLinks = [...document.querySelectorAll('.nav__link')];
 
 const options = {
-  root: null,
+  root: header,
   rootMargin: `${header.offsetHeight * -1}px`,
-  threshold: 0,
+  threshold: 0.5,
 };
 
 const onIntersect = (entries) => {
