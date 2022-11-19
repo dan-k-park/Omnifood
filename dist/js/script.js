@@ -27,17 +27,20 @@ window.addEventListener('resize', () => {
 
 const scrollRoot = document.querySelector('.hero');
 const headerLinks = [...document.querySelectorAll('.nav__link')];
+const headerBg = document.querySelector('.header__scroll-bg');
 
 const options = {
-  root: header,
   rootMargin: `${header.offsetHeight * -1}px`,
-  threshold: 0.5,
+  threshold: 0.7,
 };
 
 const onIntersect = (entries) => {
-  entries.forEach((entries) => {
-    console.log(entries);
-  });
+  const ent = entries[0];
+  if (!ent.isIntersecting) {
+    header.classList.add('scroll');
+  } else {
+    header.classList.remove('scroll');
+  }
 };
 
 const observer = new IntersectionObserver(onIntersect, options);

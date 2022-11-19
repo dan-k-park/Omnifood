@@ -15,6 +15,8 @@
   padding-inline: u.rem(25.6);
   width: 100%;
 
+  transition: all 1s ease;
+
   @include u.for-tablet-landscape-up {
     height: u.rem(72);
     padding-inline: u.rem(28.8);
@@ -26,6 +28,12 @@
   @include u.for-desktop-up {
     height: u.rem(78);
     padding-inline: u.rem(48);
+  }
+
+  &.scroll {
+    background: hsla(0, 0%, 100%, 0.97);
+
+    box-shadow: 0 u.rem(9.6) u.rem(25.6) hsla(0, 0%, 0%, 0.03);
   }
 
   .nav {
