@@ -2,72 +2,38 @@
 // yearEl.textContent = new Date().getFullYear();
 
 const mobileNavBtn = document.querySelector('.mobile-nav');
-const headerEl = document.querySelector('.header');
+const header = document.querySelector('.header');
+const links = document.querySelectorAll('a:link');
 
-mobileNavBtn.addEventListener('click', () => {
-  headerEl.classList.toggle('mobile-nav-open');
-});
-
-// Smooth scrolling
-const allLinks = document.querySelectorAll('a:link');
-allLinks.forEach((link) => {
+links.forEach((link) => {
   link.addEventListener('click', (e) => {
-    e.preventDefault();
-    const href = link.getAttribute('href');
-    if (href === '#')
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      });
-
-    if (href !== '#' && href.startsWith('#')) {
-      const sectionEl = document.querySelector(href);
-      sectionEl.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    // Close mobile nav
-    if (link.classList.contains('main-nav-link')) {
-      headerEl.classList.toggle('nav-open');
+    if (link.classList.contains('nav__link')) {
+      header.classList.toggle('mobile-nav-open');
     }
   });
 });
 
-// Sticky Nav
-const heroSectionEl = document.querySelector('.hero');
+mobileNavBtn.addEventListener('click', () => {
+  header.classList.toggle('mobile-nav-open');
+});
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    const ent = entries[0];
-    if (!ent.isIntersecting) {
-      document.body.classList.add('sticky');
-    } else {
-      document.body.classList.remove('sticky');
-    }
-  },
-  {
-    root: null,
-    threshold: 0,
-    rootMargin: '-80px',
-  }
-);
-observer.observe(heroSectionEl);
+// Sticky nav
 
-// ///////////////////////////////////////////////////////////
-// // Fixing flexbox gap property missing in some Safari versions
-// function checkFlexGap() {
-//   var flex = document.createElement('div');
-//   flex.style.display = 'flex';
-//   flex.style.flexDirection = 'column';
-//   flex.style.rowGap = '1px';
+const scrollRoot = document.querySelector('.hero');
+const headerLinks = [...document.querySelectorAll('.nav__link')];
 
-//   flex.appendChild(document.createElement('div'));
-//   flex.appendChild(document.createElement('div'));
+const options = {
+  root: null,
+  rootMargin: `${header.offsetHeight * -1}px`,
+  threshold: 0,
+};
 
-//   document.body.appendChild(flex);
-//   var isSupported = flex.scrollHeight === 1;
-//   flex.parentNode.removeChild(flex);
-//   console.log(isSupported);
+const onIntersect = (entries) => {
+  entries.forEach((entries) => {
+    console.log(entries);
+  });
+};
 
-//   if (!isSupported) document.body.classList.add('no-flexbox-gap');
-// }
-// checkFlexGap();
+const observer = new IntersectionObserver(onIntersect, options);
+
+observer.observe(scrollRoot);

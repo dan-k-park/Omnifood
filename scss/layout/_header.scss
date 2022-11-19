@@ -5,20 +5,26 @@
   justify-content: space-between;
   align-items: center;
 
-  background-color: var(--primary-tint-pale);
+  background-color: hsla(0, 0%, 100%, 0.97);
+  box-shadow: 0 u.rem(9.6) u.rem(25.6) hsla(0, 0%, 0%, 0.03);
 
   position: fixed;
   z-index: 99;
 
-  height: u.rem(84);
+  height: u.rem(64);
   padding-inline: u.rem(25.6);
   width: 100%;
 
   @include u.for-tablet-landscape-up {
+    height: u.rem(86.4);
     padding-inline: u.rem(28.8);
+
+    background-color: var(--primary-tint-pale);
+    box-shadow: none;
   }
 
   @include u.for-desktop-up {
+    height: u.rem(96);
     padding-inline: u.rem(48);
   }
 

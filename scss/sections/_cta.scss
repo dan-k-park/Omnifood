@@ -1,7 +1,7 @@
 @use '../util/' as u;
 
 .cta {
-  padding-block: u.rem(38.4) u.rem(102.4);
+  padding-block: u.rem(84) u.rem(102.4);
 
   @include u.for-tablet-landscape-up {
     padding-block: u.rem(43.2) u.rem(115.2);
